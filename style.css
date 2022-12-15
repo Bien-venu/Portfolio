@@ -604,6 +604,9 @@ header {
   visibility: hidden;
   overflow: hidden;
 }
+/* .fa-user{
+  width: 4rem;
+} */
 @media screen and (min-width: 1101px) {
   #about-card:checked ~ .about-card {
     visibility: visible;
