@@ -18,19 +18,34 @@ header {
   left: 0;
   right: 0;
   width: auto;
-  background-color: #fff;
+  background-color: #222222;
   z-index: 200;
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 6rem;
+  height: 8rem;
+  overflow: hidden;
+}
+.Timg {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+header img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rem;
 }
 .menu-list {
   display: flex;
   width: 100%;
 }
 .profileText {
-  display: inline-block;
-  float: left;
+  width: 15rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
   margin-top: 10px;
   text-align: left;
   margin-left: 20px;
@@ -39,16 +54,38 @@ header {
 }
 .profileText p {
   font-size: 12px;
-  color: var(--dark-blue);
+  color: #f6b846;
+  font-weight: 100;
+}
+.profileText {
+  color: #dedede;
 }
 .navBtn {
   position: absolute;
   right: 20px;
-  top: 10px;
+  top: 15px;
   text-align: right;
   width: 40px;
   height: 40px;
 }
+.btnz {
+  right: 90px;
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 8px;
+  background-color: #222222;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-top: -0.1rem;
+  /* margin-right: 0rem; */
+}
+
 .menu-list {
   padding: 0;
   margin-top: 10px;
@@ -79,14 +116,14 @@ header {
   width: 100%;
   margin: unset;
   padding: 0 0;
-  padding-top: 110px;
+  padding-top: 130px;
 }
 .menu::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 1px;
-  top: 0;
+  top: -0.4rem;
   left: 0;
   background: radial-gradient(
     ellipse at top,
@@ -99,13 +136,16 @@ header {
   content: "";
   width: 1px;
   height: 100%;
-  top: 0;
+  top: -0.4rem;
   left: 0;
   background: radial-gradient(
     ellipse at bottom,
     rgba(221, 221, 221, 0.075) 25%,
     rgba(90, 85, 85, 0.425) 100%
   );
+}
+.circle {
+  margin-left: 11rem;
 }
 .side-nav {
   width: 100%;
@@ -148,13 +188,15 @@ header {
   max-width: 100%;
   width: unset !important;
 }
-@media screen and (max-width: 400px) {
-  .clients-content-wrap {
-    padding: 20px;
+
+@media screen and (min-height: 850px) {
+  .my-info {
+    margin-bottom: 35vh;
   }
-  .form-group {
-    width: 100% !important;
-    margin: 5px 0;
+}
+@media screen and (min-height: 800px) {
+  .my-info {
+    margin-bottom: 25vh;
   }
 }
 @media screen and (max-width: 500px) {
@@ -167,14 +209,32 @@ header {
   .works-card .menu-list ul li {
     margin: 10px 0;
   }
-}
-@media screen and (min-height: 800px) {
-  .my-info {
-    margin-bottom: 25vh;
+  .circle {
+    margin-left: 11rem;
+  }
+  .skillss{
+    display: block;
+    align-items: center;
+    margin-left: 8rem;
+  }
+  .gee{
+    display: none;
   }
 }
-@media screen and (min-height: 850px) {
-  .my-info {
-    margin-bottom: 35vh;
+@media screen and (max-width: 400px) {
+  .clients-content-wrap {
+    padding: 20px;
+  }
+  .form-group {
+    width: 100% !important;
+    margin: 5px 0;
+  }
+  .skillss{
+    display: block;
+    align-items: center;
+    margin-left: 4rem;
+  }
+  .circle {
+    margin-left: 8rem;
   }
 }

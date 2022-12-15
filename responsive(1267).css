@@ -7,5 +7,39 @@
   display: block;
   align-items: center;
   gap: 1rem;
-  
+}
+.coding {
+  width: 14rem;
+}
+.ge {
+  width: 10rem;
+  height: 0.01rem;
+  background-color: #313132;
+  margin-left: 2rem;
+}
+.le {
+  width: 25rem;
+  height: 0.01rem;
+  background-color: #313132;
+  margin-left: 2rem;
+}
+.mainwork {
+  display: block;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.lineo {
+  display: none;
+}
+.mainwork .line{
+  display: none;
+}
+.works-card .section-header {
+  gap: 8rem;
+
+}
+
+.blogs-card .mainwork{
+  overflow: hidden;
+  margin-left: 0rem;
 }

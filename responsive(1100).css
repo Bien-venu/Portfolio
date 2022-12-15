@@ -33,6 +33,9 @@ header {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 }
+.circle{
+  margin-left: 14rem;
+}
 .right-cards {
   position: relative;
   margin: 15px 0;
@@ -84,4 +87,7 @@ header {
   .skills-section-content {
     padding: 0 20px;
   }
+  .circle{
+  margin-left: 13rem;
+}
 }
