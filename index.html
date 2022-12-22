@@ -28,7 +28,6 @@
       media="screen and (max-width: 650px)"
       href="./resposive(650).css"
     />
-    <link rel="stylesheet" href="css/animation.style.css" />
   </head>
 
   <body>
@@ -461,12 +460,13 @@
               <span class="header"><span class="cl">C</span>ontact Form</span>
             </div>
             <div class="section-content contacts-section-content">
-              <form action="#">
+
+              <form onsubmit="handleSubmit(event)">
                 <div class="form-group" style="width: 49%">
-                  <input type="text" placeholder="Full Name" />
+                  <input type="text" placeholder="Full Name" class="names" required/>
                 </div>
                 <div class="form-group" style="width: 49%">
-                  <input type="email" placeholder="Email" />
+                  <input type="email" placeholder="Email" class="email" required/>
                 </div>
                 <div class="form-group" style="width: 100%; padding-top: 10px">
                   <textarea
@@ -474,12 +474,15 @@
                     cols="30"
                     rows="10"
                     placeholder="Message"
+                    class="message"
+                    required
                   ></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group">   
                   <button type="submit">SEND MESSAGE <span class="fa-solid fa-arrow-right"></span></button>
                 </div>
               </form>
+
             </div>
           </div>
         </div>
@@ -487,12 +490,8 @@
 
           </div>
         </div>
-
-        
-
-
-        
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
