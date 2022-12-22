@@ -8,7 +8,7 @@ const handleSubmit = (event) => {
     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
   ) {
     alert(
-      `HELLO ${names} ,thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
+      `HELLO ${names}!, thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
     );
   } else {
     alert(`${email} is an invalid email! Please try again!!!`);
