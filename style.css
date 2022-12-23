@@ -1268,14 +1268,9 @@ header {
   padding-bottom: 1rem;
   border-bottom: 1px solid #3e4148;
 }
-.comment-img{
-  width: 3.1rem;
-  height: 3.1rem;
-  border-radius: 5rem;
-  overflow: hidden;
-}
 .comment-img img{
   width: 3.1rem;
+  border-radius: 5rem;
   height: 3.1rem;
 }
 .commenter{
@@ -1286,5 +1281,5 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  width: 30rem;
+  width: 28rem;
 }
