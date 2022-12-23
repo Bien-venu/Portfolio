@@ -27,9 +27,8 @@ const getBlogs = () => {
   let blogsResult = JSON.parse(fromStorage);
   console.log(blogsResult)
   if (blogsResult){
-    blogsResult.map((item)=>{
-      document.querySelector('.cc').innerHTML +=`
-    <div class="comments">
+    document.querySelector('.cc').innerHTML =blogsResult.map((item) =>(
+      `<div class="comments">
                 <div class="comment-img">
                   <img src="./imgs/comment image.jpg" alt="">
                 </div>
@@ -40,9 +39,9 @@ const getBlogs = () => {
                   ${item.comment}
                   </div>
                 </div>                
-              </div>
-    `
-  })
+              </div>`)
+  )
+  document.querySelector('.number').innerHTML= blogsResult.length;
   }
   
 }
