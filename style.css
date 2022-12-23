@@ -517,9 +517,6 @@ line
   visibility: hidden;
   overflow: hidden;
 }
-/* .fa-user{
-  width: 4rem;
-} */
 @media screen and (min-width: 1101px) {
   #about-card:checked ~ .about-card {
     visibility: visible;
@@ -555,6 +552,13 @@ line
   }
   #contact-card:checked ~ header label[for="contact-card"],
   #contact-card:checked ~ header label[for="contact-card"] span {
+    color: #f6b846;
+  }
+  #blogO:checked ~ .blogO {
+    visibility: visible;
+  }
+  #blogO:checked ~ .mainwork label[for="blogO"],
+  #blogO:checked ~ .mainwork label[for="blogO"] span {
     color: #f6b846;
   }
 }
@@ -1044,7 +1048,7 @@ line
 .mainleft img {
   width: 20rem;
 }
-.mainleft img:hover {
+.mainleft:hover img {
   width: 20.3rem;
 }
 .mainleft .imageo {
@@ -1063,7 +1067,7 @@ line
   width: 14rem;
   height: 9rem;
 }
-.mainright img:hover {
+.mainright:hover img {
   width: 14.3rem;
 }
 .mainwork .lineo {
@@ -1193,3 +1197,4 @@ line
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
+line
