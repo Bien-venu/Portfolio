@@ -518,6 +518,9 @@ header {
   visibility: hidden;
   overflow: hidden;
 }
+textarea{
+  
+}
 @media screen and (min-width: 1101px) {
   #about-card:checked ~ .about-card {
     visibility: visible;
@@ -1002,8 +1005,15 @@ header {
 /* --------------------------------------work---------------------------- */
 .mainwork {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  width: 42rem;
+  height: fit-content;
+  border: 1px solid;
   margin-left: 1rem;
+}
+.mainwork label{
+  border: 1px solid yellow;
 }
 .works-card .section-header {
   display: flex;
@@ -1031,7 +1041,10 @@ header {
   align-items: center;
   text-align: center;
   gap: 1rem;
-  margin-top: 3rem;
+  border: 1px solid red;
+  width: 19rem;
+  overflow: hidden;
+  margin-left: auto;
 }
 .under {
   display: flex;
@@ -1086,6 +1099,7 @@ header {
 }
 .blogs-card .under span {
   width: 17rem;
+  height: 3.5rem;
   font-size: 0.9rem;
   color: #949494;
 }
@@ -1210,13 +1224,16 @@ header {
 .blogO-photo img{
   width: 100%;
 }
-
+.blog-input-comment{
+  margin-top: 5rem;
+}
 .blog-header{
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
   padding: 30px 0;
 }
+.mainwork
 .blogO-title{
   font-size: 2.5rem;
   font-weight: bolder;
