@@ -5,7 +5,7 @@
   outline: 0;
   box-sizing: border-box;
   user-select: none;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
 a {
@@ -71,7 +71,6 @@ html {
     var(--gray-orange) 100%
   );
 }
-
 
 .container {
   margin: 8vh 4vw;
@@ -502,7 +501,7 @@ header {
   right: 0;
   top: 15px;
   width: auto;
-  height: 33.6rem;
+  height: 90%;
   color: #ccdede;
   background: #222222;
   transform-origin: center left;
@@ -517,9 +516,6 @@ header {
   animation-fill-mode: both;
   visibility: hidden;
   overflow: hidden;
-}
-textarea{
-  
 }
 @media screen and (min-width: 1101px) {
   #about-card:checked ~ .about-card {
@@ -632,7 +628,6 @@ textarea{
   display: flex;
   align-items: center;
   gap: 1rem;
-  
 }
 .info-text {
   width: auto;
@@ -665,7 +660,6 @@ textarea{
   padding: 0;
   display: flex;
   flex-direction: column;
-  
 }
 .info-list li {
   align-items: center;
@@ -1003,18 +997,65 @@ textarea{
   padding: 10px;
 }
 /* --------------------------------------work---------------------------- */
+.nwork {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.nwork img{
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.mleft,
+.maright {
+  width: 20rem;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgb(54, 54, 54);
+  padding-bottom: 1rem;
+  background: #1f1e1e;
+
+}
+.nwork h3{
+  margin-top: 1rem;
+}
+.mleft:hover .he{
+  color: #cc9a3f;
+}
+.maright:hover .he{
+  color: #cc9a3f;
+}
+.wimage {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
 .mainwork {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 42rem;
+  width: 90%;
   height: fit-content;
-  border: 1px solid;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
 }
-.mainwork label{
-  border: 1px solid yellow;
+.mainwork label {
+  overflow: hidden;
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 0.5rem;
+  background: #1f1e1e;
 }
+.blogs-card
 .works-card .section-header {
   display: flex;
   align-items: center;
@@ -1041,10 +1082,8 @@ textarea{
   align-items: center;
   text-align: center;
   gap: 1rem;
-  border: 1px solid red;
-  width: 19rem;
+  width: 17rem;
   overflow: hidden;
-  margin-left: auto;
 }
 .under {
   display: flex;
@@ -1062,14 +1101,11 @@ textarea{
 .mainleft img {
   width: 20rem;
 }
-.mainleft:hover img {
-  width: 20.3rem;
+.mainleft:hover .kawr{
+  color: #f6b846;
+
 }
-.mainleft .imageo {
-  width: 20rem;
-  height: 10rem;
-  overflow: hidden;
-}
+
 .mainright .imaget {
   width: 20rem;
   overflow: hidden;
@@ -1094,7 +1130,7 @@ textarea{
   padding-bottom: 0.1rem;
   margin: auto;
 }
-.blogs-card .mainwork{
+.blogs-card .mainwork {
   overflow: hidden;
 }
 .blogs-card .under span {
@@ -1210,73 +1246,84 @@ textarea{
   -o-border-radius: 4px;
 }
 
-.blogO{
+.blogO {
   font-size: 1rem;
 }
-.blogO-main{
+.blogO-main {
   width: 90%;
   overflow: hidden;
   margin-left: 2rem;
   color: #858585;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: bold;
 }
-.blogO-photo img{
+.mainleft .imageo {
+  width: 20rem;
+  height: 10rem;
+  overflow: hidden;
+}
+.imageo img {
+  width: 100%;
+  height: 10rem;
+}
+.blogO-photo img {
   width: 100%;
 }
-.blog-input-comment{
+.blog-input-comment {
   margin-top: 5rem;
 }
-.blog-header{
+.blog-header {
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
   padding: 30px 0;
 }
-.mainwork
-.blogO-title{
+
+.blogO-title {
   font-size: 2.5rem;
   font-weight: bolder;
 }
-.blogO-date{
+.blogO-date {
   margin-top: 0.5rem;
   font-size: 0.8rem;
   font-weight: bold;
   color: #858585;
 }
-.blogger{
+.blogger {
   margin-top: 2rem;
 }
-.blog-comment{
+.blog-comment {
   padding: 5rem 0;
 }
-.comment-header{
+.comment-header {
   padding-bottom: 1rem;
 }
-.blog-comment, .write{
+.blog-comment,
+.write {
   margin-left: 2rem;
   padding-bottom: 1rem;
-
 }
 
-.co{
+.co {
   color: #c5953e;
 }
-.gi{
+.gi {
   width: 30rem;
   height: 0.01rem;
   background-color: #3e4148;
 }
-.gg{
+.gg {
   width: 30rem;
   height: 0.01rem;
   background-color: #3e4148;
   margin-left: 2rem;
 }
-.comment-input,.comment-email,.comment-names{
+.comment-input,
+.comment-email,
+.comment-names {
   font-weight: 800;
 }
-.comments{
+.comments {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -1285,18 +1332,24 @@ textarea{
   padding-bottom: 1rem;
   border-bottom: 1px solid #3e4148;
 }
-.comment-img img{
+.comment-img img {
   width: 3.1rem;
   border-radius: 5rem;
   height: 3.1rem;
 }
-.commenter{
+.commenter {
   color: #efb144;
   font-weight: bolder;
 }
-.comment-message{
+.comment-message {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   width: 28rem;
+}
+.fa-xmark{
+  position: absolute;
+  color: white;
+  margin-top: -10rem;
+  margin-left: 6rem;
 }

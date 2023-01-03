@@ -13,32 +13,34 @@ const handleSubmit = (event) => {
   }
 };
 
-//
-
 const getBlogs = () => {
-  let result = localStorage.getItem("test");
   let date = new Date();
   let year = date.getFullYear();
   let month = date.toLocaleString("default", { month: "short" });
   let day = date.getDate();
+  let mainwork = document.querySelector(".mainwork");
+  let inner = document.querySelector(".inner");
+  let classe = document.querySelector(".mainleft");
 
   let fromStorage = localStorage.getItem("blogs");
   let blogsResult = JSON.parse(fromStorage);
-  console.log(blogsResult);
   if (blogsResult) {
-    document.querySelector(".mainwork").innerHTML = blogsResult.map(
-      (item) => (`
-    <label for="blogO">
-              <div class="mainleft blogO">
-                <a class="imageo"><img src=${item.image} alt=""></a>
-                <div class="under">
-                  <div class="date">${month} ${day}, ${year}</div>
-                  <h3>${item.title}</h3>
-                  <span>${item.body}</span>
-                </div>
-              </div>
-            </label>`)
-    );
+    mainwork.innerHTML = blogsResult
+      .map(
+        (item) =>
+          `<label for="blogO">
+    <div class="mainleft blogO">
+    <a class="imageo"><img src=${item.image} alt=""></a>
+    <span><i class="fa-solid fa-xmark"></i></span>
+    <div class="under">
+    <div class="date">${month} ${day}, ${year}</div>
+    <h3 class='kawr'>${item.title}</h3>
+    <span>${item.body}</span>
+    </div>
+    </div>
+    </label>
+    `).join("");
+
     document.querySelector(".number").innerHTML = blogsResult.length;
   }
 };
@@ -55,34 +57,23 @@ const handle = (e) => {
       id: 1,
       title,
       image,
-      body
+      body,
     };
     array.push(blog);
     localStorage.setItem("blogs", JSON.stringify(array));
     window.alert("Blog added successfuly");
     getBlogs();
   } else {
-    let array = JSON.parse(localStorage.getItem("blogs"));
+    let array = JSON.parse(localStorage.getItem("blogs") || "[]");
     const blog = {
       id: array.length + 1,
       title,
       image,
-      body
+      body,
     };
     array.push(blog);
     localStorage.setItem("blogs", JSON.stringify(array));
     window.alert("Blog added successfuly");
     getBlogs();
   }
-};
-
-const editBlog = (blogId) => {
-  console.log(blo);
-  let array = JSON.parse(localStorage.getItem("blogs"));
-  array.map((item) => {
-    if (blogId === item.id) {
-      item.title = "New Value";
-    }
-  });
-  localStorage.setItem("blogs", JSON.stringify(array));
 };
