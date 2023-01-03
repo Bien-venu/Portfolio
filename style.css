@@ -1019,9 +1019,9 @@ header {
   text-align: center;
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid rgb(54, 54, 54);
+  
   padding-bottom: 1rem;
-  background: #1f1e1e;
+  
 
 }
 .nwork h3{
@@ -1051,9 +1051,9 @@ header {
 }
 .mainwork label {
   overflow: hidden;
-  border: 1px solid rgb(54, 54, 54);
+  
   border-radius: 0.5rem;
-  background: #1f1e1e;
+  
 }
 .blogs-card
 .works-card .section-header {

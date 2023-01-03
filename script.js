@@ -1,13 +1,20 @@
 const handleSubmit = (event) => {
+  event.preventDefault();
   const email = document.querySelector(".email").value;
   const message = document.querySelector(".message").value;
   const names = document.querySelector(".names").value;
-  event.preventDefault();
 
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    alert(
-      `HELLO ${names}!, thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
-    );
+    let params = {
+      from_name: names,
+      email_id: email,
+      message: message,
+    };
+    emailjs.send("service_9o5ssig", "template_lfewdxo", params).then(function(res){
+      alert(
+        `HELLO ${names}!, thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
+      );
+    });
   } else {
     alert(`${email} is an invalid email! Please try again!!!`);
   }
@@ -39,7 +46,9 @@ const getBlogs = () => {
     </div>
     </div>
     </label>
-    `).join("");
+    `
+      )
+      .join("");
 
     document.querySelector(".number").innerHTML = blogsResult.length;
   }
