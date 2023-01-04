@@ -1007,7 +1007,7 @@ header {
   margin-left: 1rem;
   margin-top: 1rem;
 }
-.nwork img{
+.nwork img {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -1019,18 +1019,22 @@ header {
   text-align: center;
   border-radius: 1rem;
   overflow: hidden;
-  
-  padding-bottom: 1rem;
-  
 
+  padding-bottom: 1rem;
 }
-.nwork h3{
+.blogs-card .header {
+  display: flex;
+}
+.blogs-card .number {
+  margin-left: 0.5rem;
+}
+.nwork h3 {
   margin-top: 1rem;
 }
-.mleft:hover .he{
+.mleft:hover .he {
   color: #cc9a3f;
 }
-.maright:hover .he{
+.maright:hover .he {
   color: #cc9a3f;
 }
 .wimage {
@@ -1051,12 +1055,10 @@ header {
 }
 .mainwork label {
   overflow: hidden;
-  
+
   border-radius: 0.5rem;
-  
 }
-.blogs-card
-.works-card .section-header {
+.blogs-card .works-card .section-header {
   display: flex;
   align-items: center;
   gap: 16rem;
@@ -1101,9 +1103,8 @@ header {
 .mainleft img {
   width: 20rem;
 }
-.mainleft:hover .kawr{
+.mainleft:hover .kawr {
   color: #f6b846;
-
 }
 
 .mainright .imaget {
@@ -1263,8 +1264,9 @@ header {
   overflow: hidden;
 }
 .imageo img {
-  width: 100%;
+  width: 17rem;
   height: 10rem;
+  border-radius: 1rem;
 }
 .blogO-photo img {
   width: 100%;
@@ -1347,7 +1349,7 @@ header {
   gap: 0.3rem;
   width: 28rem;
 }
-.fa-xmark{
+.fa-xmark {
   position: absolute;
   color: white;
   margin-top: -10rem;

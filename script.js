@@ -10,11 +10,13 @@ const handleSubmit = (event) => {
       email_id: email,
       message: message,
     };
-    emailjs.send("service_9o5ssig", "template_lfewdxo", params).then(function(res){
-      alert(
-        `HELLO ${names}!, thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
-      );
-    });
+    emailjs
+      .send("service_9o5ssig", "template_lfewdxo", params)
+      .then(function (res) {
+        alert(
+          `HELLO ${names}!, thank you for your Message, We will contact you late on your email: ${email},Thank you!!!`
+        );
+      });
   } else {
     alert(`${email} is an invalid email! Please try again!!!`);
   }
@@ -35,8 +37,7 @@ const getBlogs = () => {
     mainwork.innerHTML = blogsResult
       .map(
         (item) =>
-          `<label for="blogO">
-    <div class="mainleft blogO">
+          `<div class="mainleft blogO">
     <a class="imageo"><img src=${item.image} alt=""></a>
     <span><i class="fa-solid fa-xmark"></i></span>
     <div class="under">
@@ -44,12 +45,60 @@ const getBlogs = () => {
     <h3 class='kawr'>${item.title}</h3>
     <span>${item.body}</span>
     </div>
-    </div>
-    </label>
-    `
+    </div>`
       )
       .join("");
 
+    blogsResult.forEach((e) => {
+      console.log(e);
+      inner.innerHTML += `<div class="blog-header">
+      <div class="blogO-title">${e.title}</div>
+      <div class="blogO-date">${month} ${day}, ${year} <span> </span>. <span> </span> BY <span class="cl">BIENVENU</span></div>
+     </div>
+     <div class="blogO-main">
+       <div class="blogO-photo">
+         <img src="${e.image}" alt="">
+       </div>
+       <div class="blogger">${e.body}</div>
+     </div>
+     <div class="blog-comment">
+              <div class="comment-header">
+                <span class="number"></span>
+                <span>Comments</span>
+              </div>
+              <div class="gi"></div>
+              <div class="cc"></div>
+            </div>
+            <div class="blog-input-comment">
+            <div class="section-content contacts-section-content">
+              <div class="write"><span class="co">Write</span>  a comment</div>
+              <div class="gg"></div>
+
+              <form>
+                <div class="form-group" style="width: 49%">
+                  <input type="text" placeholder="Name" class="comment-names" required/>
+                </div>
+                <div class="form-group" style="width: 49%">
+                  <input type="email" placeholder="Email" class="comment-email" required/>
+                </div>
+                <div class="form-group" style="width: 100%; padding-top: 10px">
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="Comment"
+                    class="comment-input"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">   
+                  <button type="submit">SEND COMMENT <span class="fa-solid fa-arrow-right"></span></button>
+                </div>
+              </form>
+
+            </div>
+          </div>`;
+    });
     document.querySelector(".number").innerHTML = blogsResult.length;
   }
 };
